@@ -33,7 +33,13 @@ const BannerSlider = ({ onNavigate }) => {
                 onClick={() => onNavigate('menu')}
                 style={{ cursor: 'pointer' }}
               >
-                <img src={banner} alt={`Cafe Banner ${index + 1}`} className="banner-image" />
+                <img 
+                  src={banner} 
+                  alt={`Cafe Banner ${index + 1}`} 
+                  className="banner-image" 
+                  fetchpriority={index === 0 ? "high" : "auto"}
+                  loading={index === 0 ? "eager" : "lazy"}
+                />
               </div>
             </SwiperSlide>
           ))}

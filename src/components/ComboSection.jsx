@@ -7,7 +7,7 @@ const comboData = [
     name: 'Classic Meal',
     desc: 'Chicken Burger + Cold Coffee',
     price: 250,
-    images: ['/products/product_chicken_burger.png', '/products/product_cold_coffee.png'],
+    images: ['/products/product_chicken_burger.webp', '/products/product_cold_coffee.webp'],
     theme: 'yellow'
   },
   {
@@ -15,7 +15,7 @@ const comboData = [
     name: 'Snack Pack',
     desc: 'French Fries + Ice Tea',
     price: 180,
-    images: ['/products/product_french_fries.png', '/products/product_ice_tea.png'],
+    images: ['/products/product_french_fries.webp', '/products/product_ice_tea.webp'],
     theme: 'red'
   },
   {
@@ -23,7 +23,7 @@ const comboData = [
     name: 'Morning Start',
     desc: 'Veg Sandwich + Masala Tea',
     price: 110,
-    images: ['/products/product_veg_sandwich.png', '/products/product_masala_tea.png'],
+    images: ['/products/product_veg_sandwich.webp', '/products/product_masala_tea.webp'],
     theme: 'yellow'
   },
   {
@@ -31,7 +31,7 @@ const comboData = [
     name: 'Jumbo Feast',
     desc: 'Jumbo Burger + Virgin Mojito',
     price: 280,
-    images: ['/products/product_jumbo_burger.png', '/products/product_virgin_mojito.png'],
+    images: ['/products/product_jumbo_burger.webp', '/products/product_virgin_mojito.webp'],
     theme: 'red'
   }
 ];

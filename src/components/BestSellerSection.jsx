@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import './BestSellerSection.css';
 
 const bestSellers = [
-  { id: 'bs1', name: 'Chicken Burger', price: 120, image: '/products/product_chicken_burger.png', category: 'Burger' },
-  { id: 'bs2', name: 'Veg Sandwich', price: 70, image: '/products/product_veg_sandwich.png', category: 'Sandwich' },
-  { id: 'bs3', name: 'French Fries', price: 90, image: '/products/product_french_fries.png', category: 'Fries' },
-  { id: 'bs4', name: 'Cold Coffee', price: 110, image: '/products/product_cold_coffee.png', category: 'Coffee' },
-  { id: 'bs5', name: 'L.I.I.T', price: 150, image: '/products/product_liit.png', category: 'Beverage' },
-  { id: 'bs6', name: 'Masala Tea', price: 40, image: '/products/product_masala_tea.png', category: 'Tea' },
+  { id: 'bs1', name: 'Chicken Burger', price: 120, image: '/products/product_chicken_burger.webp', category: 'Burger' },
+  { id: 'bs2', name: 'Veg Sandwich', price: 70, image: '/products/product_veg_sandwich.webp', category: 'Sandwich' },
+  { id: 'bs3', name: 'French Fries', price: 90, image: '/products/product_french_fries.webp', category: 'Fries' },
+  { id: 'bs4', name: 'Cold Coffee', price: 110, image: '/products/product_cold_coffee.webp', category: 'Coffee' },
+  { id: 'bs5', name: 'L.I.I.T', price: 150, image: '/products/product_liit.webp', category: 'Beverage' },
+  { id: 'bs6', name: 'Masala Tea', price: 40, image: '/products/product_masala_tea.webp', category: 'Tea' },
 ];
 
 const BestSellerSection = ({ getQuantity, onUpdateQuantity }) => {

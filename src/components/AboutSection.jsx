@@ -29,8 +29,8 @@ const AboutSection = () => {
     <section className="about-section">
       <div className="custom-promo-banner">
         <div className="promo-background"></div>
-        <img src="/products/product_chicken_burger.webp" className="promo-img promo-burger" alt="Burger" />
-        <img src="/products/product_veg_sandwich.webp" className="promo-img promo-sandwich" alt="Sandwich" />
+        <img src="/products/product_chicken_burger.webp" className="promo-img promo-burger" alt="Burger" loading="lazy" />
+        <img src="/products/product_veg_sandwich.webp" className="promo-img promo-sandwich" alt="Sandwich" loading="lazy" />
         <div className="promo-content">
           <span className="promo-highlight">Flat 20% Off</span>
           <span className="promo-subtext">On your first online order</span>
