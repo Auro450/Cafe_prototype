@@ -150,7 +150,7 @@ function App() {
               {currentPage === 'home' && (
                 <>
                   <BannerSlider onNavigate={setCurrentPage} />
-                  <CategoryList activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
+                  <CategoryList activeCategory={activeCategory} setActiveCategory={setActiveCategory} onNavigate={setCurrentPage} />
                   <ProductList activeCategory={activeCategory} getQuantity={getQuantity} onUpdateQuantity={handleUpdateQuantity} />
                   <ComboSection getQuantity={getQuantity} onUpdateQuantity={handleUpdateQuantity} />
                   <AboutSection />

@@ -2,12 +2,12 @@ import React from 'react';
 import { categoriesData as categories } from '../data';
 import './CategoryList.css';
 
-const CategoryList = ({ activeCategory, setActiveCategory }) => {
+const CategoryList = ({ activeCategory, setActiveCategory, onNavigate }) => {
   return (
     <div className="category-section">
       <div className="category-header">
         <h2 className="section-title">Menu</h2>
-        <a href="#" className="see-all">See All</a>
+        <a href="#" className="see-all" onClick={(e) => { e.preventDefault(); onNavigate('menu'); }}>See All</a>
       </div>
       
       <div className="category-scroll-container">
