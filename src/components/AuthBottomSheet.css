@@ -1,0 +1,140 @@
+.auth-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+.auth-bottom-sheet {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding: 30px 20px 40px;
+  z-index: 1001;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.slide-up {
+  animation: slideUpAnim 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUpAnim {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.auth-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.auth-header h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-dark, #222222);
+}
+
+.auth-close-btn {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f0f0f0;
+}
+
+.auth-subtitle {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-error {
+  color: var(--primary-red, #E60000);
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: #ffe5e5;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #E0E0E0;
+  font-family: inherit;
+  font-size: 1rem;
+  background: #fafafa;
+  transition: all 0.2s ease;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: var(--primary-yellow, #FFB800);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(255, 184, 0, 0.1);
+}
+
+.auth-submit-btn {
+  background: var(--primary-red, #E60000);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 18px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(230, 0, 0, 0.2);
+  margin-top: 10px;
+  transition: transform 0.2s;
+}
+
+.auth-submit-btn:active {
+  transform: scale(0.98);
+}
+
+.auth-switch-mode {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.auth-switch-mode span {
+  color: var(--primary-red, #E60000);
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: opacity 0.2s;
+}
+
+.auth-switch-mode span:hover {
+  text-decoration: underline;
+}
+
+.auth-switch-mode span:active {
+  opacity: 0.7;
+}

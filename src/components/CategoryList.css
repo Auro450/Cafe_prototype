@@ -1,0 +1,123 @@
+.category-section {
+  padding: 24px 20px 0 20px;
+  background-color: #FFFFFF;
+  margin-top: -30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.04);
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1A1A1A;
+  margin: 0;
+}
+
+.see-all {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #B90F11; /* Brand red */
+  text-decoration: none;
+}
+
+.category-scroll-container {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin-top: 16px;
+}
+
+.category-scroll-container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.category-list {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 24px; /* Space for box shadow to prevent cropping */
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #FFFFFF;
+  border: 1px solid #EEEEEE;
+  border-radius: 100px; /* Pill shape */
+  padding: 8px 8px 16px 8px;
+  
+  /* Calculate width so EXACTLY 3 items fit on the screen */
+  /* (100% viewport width - 40px container padding - 32px gap between the 3 items) / 3 */
+  flex: 0 0 calc((100vw - 40px - 32px) / 3);
+  max-width: 110px; /* Prevent them from getting too huge on wider screens */
+  
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-item.active {
+  background-color: #B90F11;
+  border-color: #B90F11;
+  box-shadow: 0 6px 12px rgba(185, 15, 17, 0.2);
+}
+
+.category-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: #F8F8F8;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  padding: 2px;
+}
+
+.category-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.category-item.active .category-icon-wrapper {
+  background-color: #FFFFFF;
+}
+
+.category-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555555;
+  transition: color 0.3s ease;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.category-item.active .category-name {
+  color: #FFFFFF;
+}
+
+/* Hover effects for non-touch devices */
+@media (hover: hover) {
+  .category-item:not(.active):hover {
+    border-color: #CCCCCC;
+    transform: translateY(-2px);
+  }
+}

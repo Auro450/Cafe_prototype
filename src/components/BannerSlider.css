@@ -1,0 +1,36 @@
+.banner-section {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  background-color: #FDF6EA; /* Exact match to banner image beige background */
+  overflow: hidden;
+}
+
+.banner-container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.banner-swiper {
+  width: 100%;
+  max-width: 100%;
+}
+
+.slide-content {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden; /* Ensure the pulled-up image is cropped */
+}
+
+.banner-image {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important; /* Scales proportionally without cropping */
+  display: block;
+  margin-top: -18%; /* Pull up the image to hide the baked-in Cafe App header */
+}
+
+
+

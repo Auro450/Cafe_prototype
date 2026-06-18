@@ -1,0 +1,221 @@
+.combo-section {
+  padding: 0 0 0 20px;
+  margin-top: 32px;
+  background-color: #FFFFFF;
+  position: relative;
+  z-index: 10;
+}
+
+.combo-header {
+  margin-bottom: 20px;
+}
+
+.combo-section-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1A1A1A;
+}
+
+.combo-scroll-container {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 12px; /* Space for premium shadow */
+  padding-right: 20px;
+}
+
+.combo-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.combo-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* --- Crisp, Professional Split-Card Design --- */
+
+.combo-card {
+  display: flex;
+  flex-direction: row;
+  width: 320px;
+  height: 140px;
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  flex-shrink: 0;
+  overflow: hidden; /* Crops the inner image box perfectly */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06), 0 4px 10px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.combo-card:active {
+  transform: scale(0.97);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.04);
+}
+
+.combo-image-box {
+  width: 130px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Apply soft theme tints to the image box instead of the whole card */
+.theme-yellow .combo-image-box {
+  background: linear-gradient(135deg, #FFF9EB 0%, #FFF1D4 100%);
+  border-right: 1px solid rgba(255, 184, 0, 0.1);
+}
+
+.theme-red .combo-image-box {
+  background: linear-gradient(135deg, #FFF0F0 0%, #FFE5E5 100%);
+  border-right: 1px solid rgba(230, 0, 0, 0.05);
+}
+
+.combo-img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  position: absolute;
+  mix-blend-mode: multiply; /* Soft backgrounds allow multiply to work beautifully */
+  transition: transform 0.4s ease;
+}
+
+.img-back {
+  top: 15px;
+  left: 10px;
+  transform: scale(0.85);
+  opacity: 0.8;
+}
+
+.img-front {
+  bottom: 10px;
+  right: 10px;
+  transform: scale(1.1);
+  z-index: 2;
+  filter: drop-shadow(-4px 6px 10px rgba(0,0,0,0.15));
+}
+
+.combo-card:hover .img-front {
+  transform: scale(1.2) translateY(-2px);
+}
+
+/* --- Text & Details (Pure White Right Side) --- */
+
+.combo-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 16px 16px;
+  justify-content: space-between;
+}
+
+.combo-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1A1A1A;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+
+.combo-desc {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #777777;
+  margin: 0 0 12px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.3;
+}
+
+.combo-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.combo-price {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #E60000; /* Professional theme red for price */
+}
+
+/* --- Professional Buttons --- */
+
+.combo-action {
+  display: flex;
+  align-items: center;
+}
+
+.combo-add-btn {
+  background: linear-gradient(135deg, #E60000 0%, #B90F11 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 20px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(230, 0, 0, 0.25);
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+}
+
+.combo-add-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 8px rgba(230, 0, 0, 0.2);
+}
+
+.combo-qty-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #E60000 0%, #B90F11 100%);
+  border-radius: 10px;
+  padding: 4px;
+  box-shadow: 0 6px 15px rgba(230, 0, 0, 0.25);
+  min-width: 85px;
+}
+
+.combo-qty-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.combo-qty-btn:active {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.combo-qty-value {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  min-width: 20px;
+  text-align: center;
+  margin: 0;
+  color: #FFFFFF;
+}
