@@ -57,7 +57,7 @@ const CartPage = ({ cartItems, getQuantity, onUpdateQuantity, totalPrice, isLogg
         {cartItems.map((item) => (
           <div key={item.id} className="cart-item-card">
             <div className="cart-item-img-wrapper">
-              <img src={item.image} alt={item.name} className="cart-item-img" />
+              <img src={item.image} alt={item.name} className="cart-item-img" loading="lazy" />
             </div>
             <div className="cart-item-details">
               <h3 className="cart-item-name">{item.name}</h3>

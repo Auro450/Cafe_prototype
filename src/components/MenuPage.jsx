@@ -26,7 +26,7 @@ const MenuPage = ({ getQuantity, onUpdateQuantity }) => {
             onClick={() => setActiveCategory(cat.id)}
           >
             <div className="menu-sidebar-img-wrapper">
-              <img src={cat.image} alt={cat.name} className="menu-sidebar-img" />
+              <img src={cat.image} alt={cat.name} className="menu-sidebar-img" loading="lazy" />
             </div>
             <span className="menu-sidebar-name">{cat.name}</span>
           </button>
@@ -42,7 +42,7 @@ const MenuPage = ({ getQuantity, onUpdateQuantity }) => {
             return (
               <div key={product.id} className="menu-product-card">
                 <div className="menu-product-img-wrapper">
-                  <img src={product.image} alt={product.name} className="menu-product-img" />
+                  <img src={product.image} alt={product.name} className="menu-product-img" loading="lazy" />
                 </div>
                 <div className="menu-product-details">
                   <h3 className="menu-product-name">{product.name}</h3>

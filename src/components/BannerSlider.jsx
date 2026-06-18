@@ -6,9 +6,9 @@ import 'swiper/css/effect-fade';
 import './BannerSlider.css';
 
 const banners = [
-  '/Banners/Mobile_banner_for_a_cafe_202606180058.jpeg',
-  '/Banners/Mobile_banner_for_a_cafe_202606180102.jpeg',
-  '/Banners/Mobile_banner_for_a_cafe_202606180116.jpeg'
+  '/Banners/Mobile_banner_for_a_cafe_202606180058.webp',
+  '/Banners/Mobile_banner_for_a_cafe_202606180102.webp',
+  '/Banners/Mobile_banner_for_a_cafe_202606180116.webp'
 ];
 
 const BannerSlider = ({ onNavigate }) => {

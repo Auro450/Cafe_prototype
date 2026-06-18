@@ -21,7 +21,7 @@ const ProductList = ({ activeCategory, getQuantity, onUpdateQuantity }) => {
           return (
             <div key={product.id} className="product-card">
               <div className="product-image-container">
-                <img src={product.image} alt={product.name} className="product-image" />
+                <img src={product.image} alt={product.name} className="product-image" loading="lazy" />
               </div>
               <div className="product-details">
                 <h3 className="product-name">{product.name}</h3>

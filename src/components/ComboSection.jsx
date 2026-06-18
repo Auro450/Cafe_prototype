@@ -61,8 +61,8 @@ const ComboSection = ({ getQuantity, onUpdateQuantity }) => {
             return (
               <div key={combo.id} className={`combo-card theme-${combo.theme}`}>
                 <div className="combo-image-box">
-                  <img src={combo.images[0]} alt="Item 1" className="combo-img img-back" />
-                  <img src={combo.images[1]} alt="Item 2" className="combo-img img-front" />
+                  <img src={combo.images[0]} alt="Item 1" className="combo-img img-back" loading="lazy" />
+                  <img src={combo.images[1]} alt="Item 2" className="combo-img img-front" loading="lazy" />
                 </div>
                 
                 <div className="combo-details">

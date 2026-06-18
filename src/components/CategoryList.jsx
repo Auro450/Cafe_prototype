@@ -19,7 +19,7 @@ const CategoryList = ({ activeCategory, setActiveCategory }) => {
               onClick={() => setActiveCategory(cat.id)}
             >
               <div className="category-icon-wrapper">
-                <img src={cat.image} alt={cat.name} className="category-image" />
+                <img src={cat.image} alt={cat.name} className="category-image" loading="lazy" />
               </div>
               <span className="category-name">{cat.name}</span>
             </button>

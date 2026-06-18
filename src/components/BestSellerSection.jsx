@@ -37,7 +37,7 @@ const BestSellerSection = ({ getQuantity, onUpdateQuantity }) => {
               </div>
               
               <div className="bs-image-container">
-                <img src={product.image} alt={product.name} className="bs-image" />
+                <img src={product.image} alt={product.name} className="bs-image" loading="lazy" />
               </div>
               
               <div className="bs-details">
