@@ -105,6 +105,10 @@ function App() {
     setCurrentPage('orders');
   };
 
+  const handleDeleteOrder = (orderId) => {
+    setAllOrders(prev => prev.filter(order => order.id !== orderId));
+  };
+
   const handleUpdateQuantity = (product, quantity) => {
     setCartItems(prev => {
       const existing = prev.find(item => item.id === product.id);
@@ -199,7 +203,10 @@ function App() {
               )}
 
               {currentPage === 'orders' && (
-                <OrdersPage orders={allOrders.filter(order => order.phone === userPhone)} />
+                <OrdersPage 
+                  orders={allOrders.filter(order => order.phone === userPhone)} 
+                  onDeleteOrder={handleDeleteOrder} 
+                />
               )}
 
               {currentPage === 'menu' && (

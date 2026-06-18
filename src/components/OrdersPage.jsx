@@ -1,7 +1,7 @@
 import React from 'react';
-import { ShoppingBag, Download, Clock, CheckCircle } from 'lucide-react';
+import { ShoppingBag, Download, Clock, CheckCircle, Trash2 } from 'lucide-react';
 
-const OrdersPage = ({ orders = [] }) => {
+const OrdersPage = ({ orders = [], onDeleteOrder }) => {
   if (orders.length === 0) {
     return (
       <div style={{ padding: '24px', height: '80%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
@@ -33,19 +33,40 @@ const OrdersPage = ({ orders = [] }) => {
                   </p>
                 </div>
                 
-                <div style={{ 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  gap: '6px', 
-                  padding: '6px 12px', 
-                  borderRadius: '20px', 
-                  fontSize: '0.85rem', 
-                  fontWeight: 700,
-                  background: isCompleted ? '#eef8e6' : '#fff4e5',
-                  color: isCompleted ? '#3a7d00' : '#e6a600'
-                }}>
-                  {isCompleted ? <CheckCircle size={14} /> : <Clock size={14} />}
-                  {order.status}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <div style={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    gap: '6px', 
+                    padding: '6px 12px', 
+                    borderRadius: '20px', 
+                    fontSize: '0.85rem', 
+                    fontWeight: 700,
+                    background: isCompleted ? '#eef8e6' : '#fff4e5',
+                    color: isCompleted ? '#3a7d00' : '#e6a600'
+                  }}>
+                    {isCompleted ? <CheckCircle size={14} /> : <Clock size={14} />}
+                    {order.status}
+                  </div>
+                  
+                  <button 
+                    onClick={() => onDeleteOrder && onDeleteOrder(order.id)}
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      color: '#ff4d4d',
+                      cursor: 'pointer',
+                      padding: '6px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      borderRadius: '50%',
+                      transition: 'background 0.2s'
+                    }}
+                    title="Delete Order"
+                  >
+                    <Trash2 size={18} />
+                  </button>
                 </div>
               </div>
 
