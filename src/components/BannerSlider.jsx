@@ -37,8 +37,7 @@ const BannerSlider = ({ onNavigate }) => {
                   src={banner} 
                   alt={`Cafe Banner ${index + 1}`} 
                   className="banner-image" 
-                  fetchpriority={index === 0 ? "high" : "auto"}
-                  loading={index === 0 ? "eager" : "lazy"}
+                  fetchPriority={index === 0 ? "high" : "auto"}
                 />
               </div>
             </SwiperSlide>
